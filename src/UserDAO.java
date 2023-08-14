@@ -138,7 +138,7 @@ public class UserDAO {
             preparedStatement.setString(1, username);
             try (ResultSet resultSet = preparedStatement.executeQuery()) {
                 while (resultSet.next()) {
-                    int userId = resultSet.getInt("user_id");
+                    int userId = resultSet.getInt("id");
                     String password = resultSet.getString("password");
                     String email = resultSet.getString("email");
                     String userTypeStr = resultSet.getString("user_type");

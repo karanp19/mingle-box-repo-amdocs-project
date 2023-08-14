@@ -580,8 +580,12 @@ public class Main {
             System.out.print("Enter new Bid Amount: ");
             double newBidAmount = scanner.nextDouble();
             scanner.nextLine(); // Consume the newline character
-
             bid.setBidAmount(newBidAmount);
+            System.out.print("Enter new Status: ");
+            String newStatus = scanner.nextLine();
+            scanner.nextLine(); // Consume the newline character
+            bid.setStatus(newStatus);
+
             bidDAO.updateBid(bid);
 
             System.out.println("Bid updated successfully!");

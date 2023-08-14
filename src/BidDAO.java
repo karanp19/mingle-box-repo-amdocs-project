@@ -93,7 +93,7 @@ public class BidDAO {
         }
     }
     public Bid getBidById(int bidId) throws SQLException {
-        String query = "SELECT * FROM bids WHERE bid_id = ?";
+        String query = "SELECT * FROM bids WHERE id = ?";
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setInt(1, bidId);
             try (ResultSet resultSet = preparedStatement.executeQuery()) {
